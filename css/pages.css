@@ -25,15 +25,10 @@
 .svc-img-wrap {
   position: relative;
   overflow: hidden;
+  box-shadow: 10px 10px 0 3px var(--gold);
 }
 .svc-img-wrap::before {
-  content: '';
-  position: absolute;
-  top: -15px; left: -15px;
-  right: 15px; bottom: 15px;
-  border: 1px solid var(--border-gold);
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 .svc-img {
   position: relative; z-index: 1;
