@@ -5,6 +5,7 @@
    ============================================ */
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 /* ── Cursor glow ──────────────────────────── */
 const cursorGlow = document.querySelector('.cursor-glow');
@@ -155,11 +156,11 @@ function initGSAPScroll() {
   const locInner = document.querySelector('.location-inner');
   if (locInner) {
     gsap.from('.map-frame', {
-      opacity: 0, x: -50, duration: 1, ease: 'power3.out',
+      opacity: 0, y: 30, duration: 1, ease: 'power3.out',
       scrollTrigger: { trigger: locInner, start: 'top 85%', toggleActions: 'play none none none' }
     });
     gsap.from('.loc-block', {
-      opacity: 0, x: 50, duration: 1, delay: 0.15, ease: 'power3.out',
+      opacity: 0, y: 30, duration: 1, delay: 0.15, ease: 'power3.out',
       scrollTrigger: { trigger: locInner, start: 'top 85%', toggleActions: 'play none none none' }
     });
   }
