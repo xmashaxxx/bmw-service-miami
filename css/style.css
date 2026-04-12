@@ -874,7 +874,11 @@ footer {
   .loc-block { align-items: center; }
   .contact-row { justify-content: center; }
   .map-caption { justify-content: center; }
-  .location .map-frame { margin-left: -2rem; margin-right: -2rem; }
+  .location .map-frame {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: 0;
+  }
   .nav-links {
     display: none;
     position: fixed; inset: 0;
