@@ -870,14 +870,17 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .location-inner { text-align: center; }
+  /* Strip container padding — rebuild from location-inner so map math is exact */
+  .location .container { padding-left: 0; padding-right: 0; }
+  .location-inner { padding: 0 2rem; text-align: center; }
+  /* Map: cancel location-inner padding → exact viewport width */
   .location .map-frame {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    width: calc(100% + 4rem);
   }
   .map-caption { justify-content: center; }
+  /* Hours + contact */
   .loc-block { align-items: center; width: 100%; }
   .loc-block > div { width: 100%; }
   .hours-table { width: 100%; }
