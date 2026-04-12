@@ -875,9 +875,9 @@ footer {
   .contact-row { justify-content: center; }
   .map-caption { justify-content: center; }
   .location .map-frame {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: 0;
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+    margin-right: -2rem;
   }
   .nav-links {
     display: none;
