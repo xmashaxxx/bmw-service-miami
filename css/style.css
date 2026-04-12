@@ -871,8 +871,11 @@ footer {
 
 @media (max-width: 768px) {
   .location-inner { text-align: center; }
-  .loc-block { align-items: center; }
-  .contact-row { justify-content: center; }
+  .loc-block { align-items: center; width: 100%; }
+  .loc-block > div { width: 100%; }
+  .hours-table { width: 100%; }
+  .contact-list { width: fit-content; margin: 0 auto; }
+  .contact-row { justify-content: flex-start; }
   .map-caption { justify-content: center; }
   .location .map-frame {
     width: calc(100% + 4rem);
