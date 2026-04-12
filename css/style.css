@@ -871,16 +871,25 @@ footer {
 
 @media (max-width: 768px) {
   .location-inner { text-align: center; }
+  .location .map-frame {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+  }
+  .map-caption { justify-content: center; }
   .loc-block { align-items: center; width: 100%; }
   .loc-block > div { width: 100%; }
   .hours-table { width: 100%; }
-  .contact-list { width: fit-content; margin: 0 auto; }
-  .contact-row { justify-content: flex-start; }
-  .map-caption { justify-content: center; }
-  .location .map-frame {
-    width: calc(100% + 4rem);
-    margin-left: -2rem;
-    margin-right: -2rem;
+  .hours-table td:first-child { text-align: left; }
+  .hours-table td:last-child { text-align: right; }
+  .contact-list { width: 100%; }
+  .contact-row { justify-content: center; }
+  .loc-block .btn-gold {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
   }
   .nav-links {
     display: none;
