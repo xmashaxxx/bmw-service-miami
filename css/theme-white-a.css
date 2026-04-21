@@ -1,0 +1,210 @@
+/* ================================================================
+   PREVIEW A — WHITE + DEEP INDIGO & RED
+   White canvas. Deep indigo text. Red accents pop on the headings,
+   labels, and borders. BMW blue used sparingly as a third note.
+   ================================================================ */
+
+:root {
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F2F0FA;   /* very light indigo tint */
+  --bg-card:       #FFFFFF;
+
+  --gold:          #2D1B9E;   /* deep indigo as primary accent */
+  --gold-light:    #5A45D4;   /* lighter indigo */
+  --gold-dark:     #1A0E6A;   /* darkest indigo */
+  --border-gold:   rgba(45,27,158,0.20);
+  --shadow-gold:   0 0 40px rgba(45,27,158,0.10);
+
+  --bmw-blue:      #1C69D4;   /* BMW blue as secondary */
+  --bmw-blue-dark: #1250A3;
+  --bmw-blue-muted:rgba(28,105,212,0.10);
+  --border-blue:   rgba(28,105,212,0.25);
+
+  --red:           #CC1C2E;
+  --red-light:     #E03040;
+  --red-muted:     rgba(204,28,46,0.10);
+  --border-red:    rgba(204,28,46,0.28);
+
+  --text-primary:  #100A40;   /* very deep indigo-black */
+  --text-secondary:#3D3580;
+  --text-muted:    #8B85BB;
+}
+
+/* ── Body ── */
+body { background: var(--bg-primary); color: var(--text-primary); }
+
+/* ── Loader ── */
+#page-loader { background: #0E0830; }
+.loader-brand { color: #C8BEF5; }
+.loader-track { background: rgba(45,27,158,0.15); }
+.loader-fill  { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light)); }
+
+/* ── Cursor glow ── */
+.cursor-glow {
+  background: radial-gradient(circle, rgba(204,28,46,0.03) 0%, transparent 70%);
+}
+
+/* ── Nav — always dark so white logo stays visible ── */
+nav.scrolled {
+  background: rgba(10,5,35,0.97);
+  border-bottom: 1px solid rgba(45,27,158,0.4);
+  box-shadow: 0 2px 24px rgba(10,5,35,0.15);
+}
+.nav-links a { color: #A0A0C0; }
+.nav-links a:hover { color: #C8BEF5; }
+.nav-links a::after { background: var(--red); }
+.nav-logo-name { color: #F0EEFF; }
+.nav-logo-name span { color: var(--red); }
+.nav-logo-sub { color: #5A4898; }
+.nav-cta {
+  border-color: var(--red) !important;
+  background: var(--red) !important;
+  color: #fff !important;
+}
+.nav-cta:hover {
+  background: var(--red-light) !important;
+  border-color: var(--red-light) !important;
+  box-shadow: 0 8px 24px rgba(204,28,46,0.35) !important;
+}
+@media (max-width: 768px) {
+  .nav-links { background: rgba(10,5,35,0.99); }
+  .nav-links a { color: #C8BEF5; }
+}
+
+/* ── Hero — deep indigo overlay ── */
+.hero { background: #08052A; }
+.hero-bg-anim {
+  background:
+    radial-gradient(ellipse at 15% 55%, rgba(45,27,158,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 25%, rgba(28,105,212,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 90%, rgba(204,28,46,0.08) 0%, transparent 45%);
+}
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(45,27,158,0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45,27,158,0.4) 1px, transparent 1px);
+}
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(8,5,42,0.88) 0%,
+    rgba(8,5,42,0.52) 50%,
+    rgba(8,5,42,0.88) 100%
+  );
+}
+.hero-eyebrow { color: #C8BEF5; border-color: rgba(200,190,245,0.3); }
+.hero-title em { color: var(--red); }
+.scroll-bar { background: linear-gradient(to bottom, var(--red), transparent); }
+
+/* ── Section labels — red ── */
+.section-label { color: var(--red); }
+
+/* ── Accent lines — red-to-indigo ── */
+.gold-line {
+  background: linear-gradient(90deg, var(--red), var(--gold-light));
+}
+
+/* ── Section backgrounds ── */
+.about    { background: var(--bg-secondary); }
+.services { background: var(--bg-primary); }
+.engine-section { background: var(--bg-secondary); }
+.reviews  { background: var(--bg-primary); }
+.location { background: var(--bg-secondary); }
+.social-section { background: var(--bg-primary); }
+
+/* ── Headings italic/em — indigo ── */
+h2 em, h1 em { color: var(--gold); }
+
+/* ── About stats ── */
+.about-img-wrap::before { border-color: rgba(204,28,46,0.35); }
+.stat-box {
+  background: #FFFFFF;
+  border-color: rgba(45,27,158,0.18);
+  box-shadow: 0 4px 20px rgba(45,27,158,0.06);
+}
+.stat-num { color: var(--gold); }
+.stat-desc { color: var(--text-muted); }
+
+/* ── Services grid ── */
+.services-grid { background: rgba(45,27,158,0.12); }
+.svc-card { background: #FFFFFF; }
+.svc-card:hover { background: #F5F2FF; }
+.svc-card::after { background: linear-gradient(90deg, var(--red), var(--gold-light)); }
+.svc-icon { color: var(--gold); }
+.svc-link { color: var(--red); }
+.svc-card h3 { color: var(--text-primary); }
+.svc-card p  { color: var(--text-secondary); }
+
+/* ── Engine SVG — hue-rotate gold → indigo ── */
+.engine-spec::before { background: var(--red); }
+#engine-svg {
+  filter: hue-rotate(230deg) saturate(1.2) brightness(0.9)
+          drop-shadow(0 0 50px rgba(45,27,158,0.10));
+}
+
+/* ── Reviews ── */
+.review-card {
+  background: #FFFFFF;
+  border-color: rgba(45,27,158,0.15);
+  box-shadow: 0 4px 20px rgba(10,5,40,0.05);
+}
+.review-card:hover { border-color: rgba(204,28,46,0.4); }
+.review-stars { color: var(--red); }
+.review-body  { color: var(--text-secondary); }
+.review-name  { color: var(--text-primary); }
+.review-avatar {
+  background: linear-gradient(135deg, var(--red), var(--gold-light));
+  color: #fff;
+}
+
+/* ── Location / hours ── */
+.hours-table tr { border-bottom: 1px solid rgba(45,27,158,0.08); }
+.hours-table td:last-child { color: var(--bmw-blue); }
+.map-frame::after { border-color: rgba(45,27,158,0.22); }
+.map-caption { background: #fff; border-color: rgba(45,27,158,0.18); color: var(--text-muted); }
+.map-caption strong { color: var(--red); }
+.contact-icon { border-color: rgba(204,28,46,0.28); color: var(--red); }
+.contact-val  { color: var(--text-primary); }
+
+/* ── Social ── */
+.social-link { border-color: rgba(45,27,158,0.18); color: var(--text-secondary); }
+.social-link:hover { border-color: var(--red); color: var(--red); box-shadow: 0 8px 24px rgba(204,28,46,0.15); }
+
+/* ── Buttons ── */
+.btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); color: #fff; }
+.btn-gold:hover { box-shadow: 0 12px 40px rgba(45,27,158,0.35); }
+.btn-outline { color: var(--gold); border-color: var(--border-gold); }
+.btn-outline:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+
+/* ── Footer — deep indigo ── */
+footer {
+  background: #0C0640;
+  border-top: 1px solid rgba(45,27,158,0.4);
+}
+.footer-copy  { color: rgba(200,190,245,0.55); }
+.footer-links a { color: rgba(200,190,245,0.55); }
+.footer-links a:hover { color: #C8BEF5; }
+.footer-credit { color: rgba(200,190,245,0.55); }
+.footer-credit span { color: var(--red); }
+
+/* ── Inner page hero ── */
+.page-hero { background: var(--bg-secondary); border-bottom-color: rgba(204,28,46,0.20); }
+.page-hero::before {
+  background: radial-gradient(ellipse at 80% 50%, rgba(45,27,158,0.06) 0%, transparent 60%);
+}
+
+/* ── Services page photo borders ── */
+.svc-img-wrap { box-shadow: 10px 10px 0 3px var(--red); }
+.svc-section:nth-child(2) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--bmw-blue); }
+.svc-section:nth-child(3) .svc-img-wrap { box-shadow: 10px 10px 0 3px #0A0A0A; }
+.svc-section:nth-child(4) .svc-img-wrap { box-shadow: 10px 10px 0 3px #2D1B9E; }
+.svc-section:nth-child(5) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--red); }
+.svc-section:nth-child(6) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--bmw-blue); }
+.svc-section:nth-child(7) .svc-img-wrap { box-shadow: 10px 10px 0 3px #0A0A0A; }
+.svc-section:nth-child(8) .svc-img-wrap { box-shadow: 10px 10px 0 3px #2D1B9E; }
+
+/* ── Services page content text ── */
+.services-page .svc-section:nth-child(odd)  { background: var(--bg-primary); }
+.services-page .svc-section:nth-child(even) { background: var(--bg-secondary); }
+.svc-content h2 { color: var(--text-primary); }
+.svc-content p  { color: var(--text-secondary); }

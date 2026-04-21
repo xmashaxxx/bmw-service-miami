@@ -1,0 +1,207 @@
+/* ================================================================
+   PREVIEW B — WHITE + BLACK & CRIMSON RED
+   Stark white canvas. True black structure and text. BMW M crimson
+   as the only accent. Indigo as a subtle third tone in shadows/depth.
+   Bold, high-contrast, racing performance feel.
+   ================================================================ */
+
+:root {
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F4F4F4;   /* cool light grey */
+  --bg-card:       #FFFFFF;
+
+  --gold:          #C8102E;   /* BMW M crimson as the single accent */
+  --gold-light:    #E03045;
+  --gold-dark:     #A00C24;
+  --border-gold:   rgba(200,16,46,0.22);
+  --shadow-gold:   0 0 40px rgba(200,16,46,0.12);
+
+  --bmw-blue:      #1A1A6E;   /* deep navy-indigo as secondary */
+  --bmw-blue-dark: #0E0E4E;
+  --bmw-blue-muted:rgba(26,26,110,0.08);
+  --border-blue:   rgba(26,26,110,0.20);
+
+  --red:           #C8102E;   /* same as gold in this theme */
+  --red-light:     #E03045;
+  --red-muted:     rgba(200,16,46,0.10);
+  --border-red:    rgba(200,16,46,0.25);
+
+  --text-primary:  #000000;
+  --text-secondary:#2A2A2A;
+  --text-muted:    #777777;
+}
+
+/* ── Body ── */
+body { background: var(--bg-primary); color: var(--text-primary); }
+
+/* ── Loader ── */
+#page-loader { background: #080808; }
+.loader-brand { color: var(--gold-light); }
+.loader-track { background: rgba(200,16,46,0.15); }
+.loader-fill  { background: linear-gradient(90deg, var(--gold-dark), var(--gold-light)); }
+
+/* ── Cursor glow ── */
+.cursor-glow {
+  background: radial-gradient(circle, rgba(200,16,46,0.04) 0%, transparent 70%);
+}
+
+/* ── Nav — pure black always visible ── */
+nav.scrolled {
+  background: rgba(0,0,0,0.97);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+.nav-links a { color: #999999; }
+.nav-links a:hover { color: #FFFFFF; }
+.nav-links a::after { background: var(--gold); }
+.nav-logo-name { color: #FFFFFF; }
+.nav-logo-name span { color: var(--gold); }
+.nav-logo-sub { color: #555555; }
+.nav-cta {
+  border-color: var(--gold) !important;
+  background: var(--gold) !important;
+  color: #fff !important;
+}
+.nav-cta:hover {
+  background: var(--gold-light) !important;
+  border-color: var(--gold-light) !important;
+  box-shadow: 0 8px 24px rgba(200,16,46,0.4) !important;
+}
+@media (max-width: 768px) {
+  .nav-links { background: rgba(0,0,0,0.99); }
+  .nav-links a { color: #CCCCCC; }
+}
+
+/* ── Hero — pitch black ── */
+.hero { background: #000000; }
+.hero-bg-anim {
+  background:
+    radial-gradient(ellipse at 20% 55%, rgba(200,16,46,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(26,26,110,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 90%, rgba(200,16,46,0.06) 0%, transparent 45%);
+}
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(200,16,46,0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,16,46,0.35) 1px, transparent 1px);
+}
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.90) 0%,
+    rgba(0,0,0,0.55) 50%,
+    rgba(0,0,0,0.90) 100%
+  );
+}
+.hero-eyebrow { color: var(--gold-light); border-color: rgba(200,16,46,0.4); }
+.hero-title em { color: var(--gold); }
+.scroll-bar { background: linear-gradient(to bottom, var(--gold), transparent); }
+
+/* ── Section labels — red ── */
+.section-label { color: var(--gold); }
+
+/* ── Accent lines — red solid ── */
+.gold-line { background: var(--gold); width: 48px; height: 2px; }
+
+/* ── Section backgrounds ── */
+.about    { background: var(--bg-secondary); }
+.services { background: var(--bg-primary); }
+.engine-section { background: var(--bg-secondary); }
+.reviews  { background: var(--bg-primary); }
+.location { background: var(--bg-secondary); }
+.social-section { background: var(--bg-primary); }
+
+/* ── Headings — black with red em ── */
+h2 em, h1 em { color: var(--gold); }
+h2, h3 { color: var(--text-primary); }
+
+/* ── About ── */
+.about-img-wrap::before { border-color: rgba(0,0,0,0.15); }
+.stat-box {
+  background: #FFFFFF;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0 0 var(--gold);
+}
+.stat-num  { color: var(--gold); }
+.stat-desc { color: var(--text-muted); }
+
+/* ── Services grid ── */
+.services-grid { background: #000000; }
+.svc-card { background: #FFFFFF; }
+.svc-card:hover { background: #FFF5F6; }
+.svc-card::after { background: var(--gold); }
+.svc-icon { color: #000000; }
+.svc-link { color: var(--gold); }
+
+/* ── Engine SVG — hue-rotate to red ── */
+.engine-spec::before { background: var(--gold); }
+#engine-svg {
+  filter: hue-rotate(315deg) saturate(1.5) brightness(0.85)
+          drop-shadow(0 0 50px rgba(200,16,46,0.10));
+}
+
+/* ── Reviews ── */
+.review-card {
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+}
+.review-card:hover { border-color: var(--gold); box-shadow: 4px 4px 0 0 var(--gold); }
+.review-stars { color: var(--gold); }
+.review-body  { color: var(--text-secondary); }
+.review-name  { color: var(--text-primary); }
+.review-avatar {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  color: #fff;
+}
+
+/* ── Location / hours ── */
+.hours-table tr { border-bottom: 1px solid #E0E0E0; }
+.hours-table td:last-child { color: var(--gold); }
+.map-frame::after { border: 2px solid #000000; }
+.map-caption { background: #fff; border: 1px solid #DDDDDD; color: var(--text-muted); }
+.map-caption strong { color: var(--gold); }
+.contact-icon { border: 2px solid #000000; color: #000000; }
+.contact-val  { color: var(--text-primary); }
+
+/* ── Social ── */
+.social-link { border: 1px solid #CCCCCC; color: var(--text-secondary); }
+.social-link:hover { border-color: #000000; color: #000000; box-shadow: 4px 4px 0 0 var(--gold); }
+
+/* ── Buttons ── */
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-gold:hover { background: var(--gold-dark); box-shadow: 4px 4px 0 0 #000000; }
+.btn-outline { color: #000000; border: 2px solid #000000; }
+.btn-outline:hover { background: #000000; color: #fff; }
+
+/* ── Footer — black ── */
+footer {
+  background: #000000;
+  border-top: 3px solid var(--gold);
+}
+.footer-copy  { color: rgba(255,255,255,0.45); }
+.footer-links a { color: rgba(255,255,255,0.45); }
+.footer-links a:hover { color: var(--gold); }
+.footer-credit { color: rgba(255,255,255,0.45); }
+.footer-credit span { color: var(--gold); }
+
+/* ── Inner page hero ── */
+.page-hero { background: #F4F4F4; border-bottom: 2px solid #000000; }
+.page-hero h1 em { color: var(--gold); }
+.page-hero::before {
+  background: radial-gradient(ellipse at 80% 50%, rgba(200,16,46,0.06) 0%, transparent 60%);
+}
+
+/* ── Services page photo borders — bold, offset style ── */
+.svc-img-wrap { box-shadow: 10px 10px 0 3px var(--red); }
+.svc-section:nth-child(2) .svc-img-wrap { box-shadow: 10px 10px 0 3px #000000; }
+.svc-section:nth-child(3) .svc-img-wrap { box-shadow: 10px 10px 0 3px #1A1A6E; }
+.svc-section:nth-child(4) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--red); }
+.svc-section:nth-child(5) .svc-img-wrap { box-shadow: 10px 10px 0 3px #000000; }
+.svc-section:nth-child(6) .svc-img-wrap { box-shadow: 10px 10px 0 3px #1A1A6E; }
+.svc-section:nth-child(7) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--red); }
+.svc-section:nth-child(8) .svc-img-wrap { box-shadow: 10px 10px 0 3px #000000; }
+
+.services-page .svc-section:nth-child(odd)  { background: var(--bg-primary); }
+.services-page .svc-section:nth-child(even) { background: var(--bg-secondary); }
+.svc-content h2 { color: var(--text-primary); }
+.svc-content p  { color: var(--text-secondary); }
