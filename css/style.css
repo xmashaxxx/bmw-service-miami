@@ -253,17 +253,13 @@ nav.scrolled {
   gap: 13px;
 }
 .nav-logo-badge {
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  border: 1.5px solid var(--gold);
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--gold);
   flex-shrink: 0;
+}
+.nav-logo-badge img {
+  height: 42px;
+  width: auto;
+  display: block;
 }
 .nav-logo-name {
   font-family: var(--font-heading);

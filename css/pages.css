@@ -25,8 +25,16 @@
 .svc-img-wrap {
   position: relative;
   overflow: hidden;
-  box-shadow: 10px 10px 0 3px var(--gold);
+  box-shadow: 10px 10px 0 3px var(--red);
 }
+/* Cycle: red → blue → black → indigo */
+.svc-section:nth-child(2) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--bmw-blue); }
+.svc-section:nth-child(3) .svc-img-wrap { box-shadow: 10px 10px 0 3px #0A0A0A; }
+.svc-section:nth-child(4) .svc-img-wrap { box-shadow: 10px 10px 0 3px #3D2B9E; }
+.svc-section:nth-child(5) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--red); }
+.svc-section:nth-child(6) .svc-img-wrap { box-shadow: 10px 10px 0 3px var(--bmw-blue); }
+.svc-section:nth-child(7) .svc-img-wrap { box-shadow: 10px 10px 0 3px #0A0A0A; }
+.svc-section:nth-child(8) .svc-img-wrap { box-shadow: 10px 10px 0 3px #3D2B9E; }
 .svc-img-wrap::before {
   display: none;
 }
